@@ -19,8 +19,8 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
+[Mobile Screenshot](./screenshot-mobile.jpg)
+[Desktop Screenshot](./screenshot-dekstop.jpg)
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
