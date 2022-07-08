@@ -11,16 +11,14 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
 ### Screenshot
 
-![Mobile Screenshot](./screenshot-mobile.png)
-![Desktop Screenshot](./screenshot-dekstop.png)
+  - [Mobile Screenshot](./screenshot-mobile.png)
+  - [Desktop Screenshot](./screenshot-desktop.png)
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
