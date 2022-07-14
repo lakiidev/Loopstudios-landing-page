@@ -1,0 +1,612 @@
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$gray-drak: hsl(0, 0%, 55%);
+$gray-very-dark: hsl(0, 0%, 41%);
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+$bold-text: 'Alata', sans-serif;
+$thin-text: 'Josefin Sans', sans-serif;
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html
+{
+    font-size: 62.5%;
+    //overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+    
+header
+{
+    overflow-x: hidden;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+    background-image:linear-gradient(to bottom, rgba($black,.4)), url(../images/desktop/image-hero.jpg);
+    background-size: cover;
+    background-position: center center;
+    nav
+    {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        ul
+        {
+            display: flex;
+            gap: 5rem;
+            li
+            {
+                list-style: none;
+                a
+                {
+                    color: $white;
+                    font-family: $bold-text;
+                    font-size: 1.8rem;
+                    text-decoration: none;
+                    position: relative;
+                }
+                  a:after {    
+                    background: none repeat scroll 0 0 transparent;
+                    bottom: -1rem;
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    left: 50%;
+                    position: absolute;
+                    background: #fff;
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                    width: 0;
+                  }
+                  a:hover:after,a:active:after { 
+                    width: 50%; 
+                    left:25%; 
+                  }
+                
+            }
+        }
+        .mobile-menu
+        {
+            display: none ;
+        }
+        .close
+        {
+            display: none;
+        }
+    }
+    .wrapper
+    {
+        width: 80%;
+        display: flex;
+        .text
+        {
+
+            padding-top: 20rem;
+            width: min-content;
+            h1
+            {
+                visibility: hidden;
+                padding: 2rem 15rem 2rem 2rem;
+                justify-self: flex-start;
+                text-transform: uppercase;
+                font-family: $thin-text;
+                font-size: 4.5vw;
+                font-weight: 300;
+                color: $white;
+                position: relative;
+                overflow: hidden;
+                &:before {      
+                    visibility: visible;
+                    transform: translateX(100%);
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 99.5%;
+                    height: 4px;
+                    border-bottom: 4px solid transparent;
+                    border-left: 4px solid transparent;
+                  }
+                 
+                &:after {
+                    visibility: visible;
+                    transform: translateX(-100%);
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 99.5%;
+                    height: 4px;
+                    border-top: 4px solid transparent;
+                    border-right: 4px solid transparent;
+                  }
+            }
+            .load
+            {
+              &:before {
+                visibility: visible; 
+                transition: .2s transform linear, .5s height linear .2s;
+                transform: translateX(0);
+                height: 99.5%;
+                border-color: white;
+              }
+              &:after {
+                visibility: visible;
+                transition: .4s transform linear .5s, .2s height linear .2s;
+                transform: translateX(0);
+                height: 99.5%;
+                border-color: white;
+              }  
+            }    
+              
+        }
+    }
+}
+.interactive
+{
+    padding-top: 20rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    img
+    {
+        position: relative;
+    }
+    .wrapper
+    {
+        max-height: 70vh;
+        width: 80%;
+        display: flex;
+        justify-content: center;    
+        img
+        {
+            align-self: center;
+            max-width: 50%;
+        }
+        .text
+        {
+            z-index: 1;
+            margin-left: -10rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            max-height: 100%;
+            h2,p
+            {
+                text-align: left;
+                width: 90%;
+                background-color: $white;
+                padding: 10rem 5rem 0rem 10rem;
+            }
+            p
+            {
+                padding-top: 2rem !important;
+                font-size: 2rem;
+                color: $gray-very-dark;
+                width: 80%;
+            }
+            h2
+            {
+                text-transform: uppercase;
+                font-family: $thin-text;
+                font-weight: 300;
+                font-size: 3vw;
+                padding-bottom: 0rem;
+            }
+        }
+    }
+}
+
+.creations
+{
+    padding-top: 20rem;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    .heading
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 15rem;
+        h2
+        {
+            text-transform: uppercase;
+            font-size: 5rem;
+            font-family: $thin-text;
+            font-weight: 300;
+        }
+        a
+        {
+            font-family: $thin-text;
+            text-transform: uppercase;
+            color: $black;
+            font-size: 1.5rem;
+            padding: 1rem 4rem 1rem 4rem;
+            border: solid $black 2px;
+            text-decoration: none;
+            letter-spacing: .2rem;
+        }
+        a:hover
+        {
+            transition: .3s;
+            color: $white;
+            background-color: $black;
+        }
+    }
+        .create
+        {
+            .deep-earth
+            {
+                background-image: linear-gradient(to top, rgba($black,.3),transparent),url(../images/desktop/image-deep-earth.jpg);
+                p
+                {
+                   width: 70%; 
+                }
+                
+            }
+            .night-arcade
+            {
+                background-image: linear-gradient(to top, rgba($black,.3),transparent),url(../images/desktop/image-night-arcade.jpg);
+            }
+            .soccer-team
+            {
+                background-image: linear-gradient(to top, rgba($black,.3),transparent),url(../images/desktop/image-soccer-team.jpg);
+            }
+            .grid
+            {
+                background-image: linear-gradient(to top, rgba($black,.3),transparent),url(../images/desktop/image-grid.jpg);
+            }
+            .up-above
+            {
+                background-image: linear-gradient(to top, rgba($black,.3),transparent),   url(../images/desktop/image-from-above.jpg);
+            }
+            .pocket
+            {
+                background-image: linear-gradient(to top, rgba($black,.3),transparent),url(../images/desktop/image-pocket-borealis.jpg);
+            }
+            .curiosity
+            {
+                background-image: linear-gradient(to top, rgba($black,.3),transparent),url(../images/desktop/image-curiosity.jpg);
+
+            }
+            .fisheye
+            {
+                background-image: linear-gradient(to top, rgba($black,.3),transparent),url(../images/desktop/image-fisheye.jpg);
+                
+            }
+            .deep-earth,.pocket,.fisheye,.curiosity,.soccer-team,.up-above,.grid,.night-arcade
+            {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                color: white;
+                display: flex;
+                align-items: flex-end;
+                position: relative;
+                p
+                {
+                    position: absolute;
+                    bottom: 2rem;
+                    left: 4rem;
+                    width: 80%;
+                    font-size: 2.2vw;
+                    text-transform: uppercase;
+                    font-family: $thin-text;
+                    font-weight: 300;
+                }
+            }
+            .creation::before
+            {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba($color: $white, $alpha: .5);
+                opacity: 0;
+                transition: opacity .5s ease-in-out;
+            }
+            .creation:hover::before
+            {
+                opacity: 1;
+            }
+            .creation:hover
+            {
+                p
+                {
+                    color: $black !important;
+                }
+            }
+            .grid
+                {
+                    p
+                    {
+                        width: 30% ;
+                    }
+                }
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(15rem,20%));
+            gap: 5rem;
+            justify-content: center;
+            height:110vh;
+        }
+}
+footer
+{
+    overflow: hidden;
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+    margin-top:  20rem;
+    a:after {    
+        background: none repeat scroll 0 0 transparent;
+        bottom: -1rem;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #fff;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      a:hover:after,a:active:after { 
+        width: 50%; 
+        left:25%; 
+      }
+    .wrapper
+    {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        display: flex;
+        .first-line
+        {
+            display: flex;            
+            flex-direction: column;
+            align-items: flex-start;
+            ul
+            {
+                padding-top: 2rem;
+                display: flex;
+                gap:3rem;
+                list-style: none;
+                a
+                {
+                   color: white;
+                   font-size: 2rem; 
+                   text-decoration: none;
+                   position: relative;
+                }
+                
+            }
+        }
+        .second-line
+        {
+
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            .social-icons
+            {
+                display: flex;
+                gap: 2rem;
+                justify-content: flex-end;
+                a
+                {
+                    position: relative;
+                }
+                a:hover:after
+                {
+                    width: 100%; 
+                    left:0; 
+                }
+            }
+            p
+            {
+                padding-top: 2rem;
+                font-size: 1.8rem;
+                color: $gray-drak;
+            }
+        } 
+    }
+        
+    
+}
+
+@media(max-width: 800px)
+{
+    header
+    {
+        height: 100vh;
+        nav
+        {
+            ul
+            {  
+                position: absolute;
+                bottom: 20vh;
+                display: none;
+                flex-direction: column;
+                li
+                {
+                   a
+                    {
+                        font-size: 4rem;
+                        text-transform: uppercase;
+                        font-family: $thin-text;
+                        font-weight: 300;
+                    } 
+                }
+                
+            }
+            .mobile-menu
+            {
+                display: block;
+            }
+        }
+        
+        .wrapper
+        {
+            padding-top: 15rem;
+            justify-content: center ;
+        }
+        .text
+        {
+            padding-top: 5rem !important;
+            h1
+            {
+                font-size: 4.5rem !important;
+                padding: 2rem 2rem 2rem 2rem !important;
+            }
+            
+        }
+    }
+    .interactive
+    {
+        .wrapper
+        {
+            flex-direction: column;
+            align-items: center;
+            img
+            {
+                max-width: 100%;
+            }
+            .text
+            {
+                margin-left: 0;
+                align-items: center;
+                p,h2
+                {
+                    padding-top: 5rem !important;
+                    text-align: center ;
+                    padding: 0;
+                }
+                h2
+                {
+                    font-size: 3rem;
+                }
+                
+            }
+        }
+    }
+    .creations
+    {
+        height: 250vh;
+        .heading
+        {
+            justify-content: center;
+            padding-bottom: 5rem;
+            h2
+            {
+                font-size: 4rem;
+            }
+            a
+            {
+                display: none;
+            }
+        }
+        .create
+        {
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 100%));
+        }
+         .deep-earth
+        {
+             background-image: linear-gradient(to top, rgba($black,.3),transparent),url(../images/mobile/image-deep-earth.jpg) !important;
+        }
+        .night-arcade
+        {
+             background-image: linear-gradient(to top, rgba($black,.3),transparent),url(../images/mobile/image-night-arcade.jpg) !important;
+        }
+        .soccer-team
+        {
+            background-image: linear-gradient(to top, rgba($black,.3),transparent),url(../images/mobile/image-soccer-team.jpg) !important;
+        }
+        .grid
+        {
+                
+             background-image: linear-gradient(to top, rgba($black,.3),transparent),url(../images/mobile/image-grid.jpg) !important;
+        }
+        .up-above
+        {
+            background-image: linear-gradient(to top, rgba($black,.3),transparent),   url(../images/mobile/image-from-above.jpg) !important;
+        }
+        .pocket
+        {
+            background-image: linear-gradient(to top, rgba($black,.3),transparent),url(../images/mobile/image-pocket-borealis.jpg) !important;
+        }
+        .curiosity
+        {
+            background-image: linear-gradient(to top, rgba($black,.3),transparent),url(../images/mobile/image-curiosity.jpg) !important;
+        }
+        .fisheye
+        {
+             background-image: linear-gradient(to top, rgba($black,.3),transparent),url(../images/mobile/image-fisheye.jpg) !important;
+                
+        }
+        .deep-earth,.pocket,.fisheye,.curiosity,.soccer-team,.up-above,.grid,.night-arcade
+        {
+            background-position: center center !important;
+            background-size: cover !important;
+            height: 20vh;
+            p
+            {
+                width: 60% !important;
+                font-size: 3rem !important;
+            }
+        }
+        .create:after
+        {
+            justify-self: center;
+            content: "See all";
+            text-transform: uppercase;
+            color: $black;
+            font-size: 2rem;
+            padding: 1rem 4rem 1rem 4rem;
+            border: solid $black 2px;
+            text-decoration: none;
+            width: max-content;
+            font-family: $thin-text;
+
+        }
+    }
+
+    footer
+    {
+        margin-top: 5rem;
+        .wrapper
+        {
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            .first-line
+            {
+                align-items: center;
+            ul
+                {
+                    padding-top: 5rem;
+                    flex-direction: column;
+                }
+            
+            }
+            .second-line
+            {
+                padding-top: 5rem;
+                align-items: center;
+            }
+        }
+        
+    }
+}
